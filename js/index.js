@@ -116,6 +116,11 @@ prevDefault.addEventListener("click", (e) => {
     event.preventDefault();
 })
 
+TweenMax.to(".intro img", 6, {
+    rotation:360,
+  
+});
+
 
 
 
