@@ -25,8 +25,9 @@ nav.forEach(element => {
 /**           Click Event           **/
 
 const button = document.querySelector(".intro h2 ");
-    console.log(button);
+    // console.log(button);
 
+    ////changes text, changes color and enlarges////
     button.addEventListener("click", (event) => {
         event.target.textContent = "Enjoy your ride!";
         event.target.style.color = "hotpink";
@@ -44,6 +45,20 @@ window.addEventListener("scroll", () => {
     if(scrolled === scrollable) {
         alert("You scrolled to the bottom!")
     }
+});
+
+/**             Copy Event               **/
+
+const copy = document.querySelector(".destination p");
+// console.log(copy);
+
+//////when you copy text, pop up and turns orange
+copy.addEventListener("copy", (e) => {
+    const selection = document.getSelection();
+    e.clipboardData.setData('text/plain', selection.toString());
+    event.preventDefault();
+    console.log("You copied me");
+    copy.style.color = "orange";
 });
 
 
